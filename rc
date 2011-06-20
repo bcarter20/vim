@@ -1,0 +1,57 @@
+set nocompatible
+call pathogen#helptags()
+call pathogen#runtime_append_all_bundles()
+set hidden
+if &t_Co >= 256 || has("gui_running")
+   colorscheme motus
+endif
+
+if &t_Co > 2 || has("gui_running")
+   " switch syntax highlighting on, when the terminal has colors
+   syntax on
+endif
+set bg=dark
+set gfn=Monospace\ Bold\ 12
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set nobackup
+set noswapfile
+set history=1000
+set undolevels=1000
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+filetype plugin indent on
+
+map Q gq
+
+set mouse=a
+
+set nowrap        " don't wrap lines
+set tabstop=4     " a tab is four spaces
+set backspace=indent,eol,start
+                  " allow backspacing over everything in insert mode
+set autoindent    " always set autoindenting on
+set copyindent    " copy the previous indentation on autoindenting
+set number        " always show line numbers
+set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
+set showmatch     " set show matching parenthesis
+set ignorecase    " ignore case when searching
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set smarttab      " insert tabs on the start of a line according to
+                  "    shiftwidth, not tabstop
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+"""Fuzzy Finder"""
+nmap ff :FufFile<CR> 
+nmap fb :FufBuffer<CR>
+nmap fd :FufDir<CR>
+nmap fl :FufLine<CR>
+
+""""NerdTree""""
+nmap nt :NERDTreeToggle<CR>
+
+
