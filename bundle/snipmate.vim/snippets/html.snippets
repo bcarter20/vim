@@ -33,7 +33,7 @@ snippet control
 snippet enter
 	&#x2305;
 # ⌘
-snippet command
+snippet com
 	&#x2318;
 # ⌥
 snippet option
@@ -213,3 +213,90 @@ snippet span
 	<span id="${1:anything}">${2:foranything}</span>${3}
 snippet url
 	<a href="${1:http://dom.com}">${2:This web rules!}</a>${3}
+##HTML5 Specific
+snippet article
+	<article id="${1:name}">
+		${2}
+	<article/>${3}
+snippet nav
+	<nav id="${1:name}"
+		${2}
+	<nav/>${3}
+snippet aside
+	<aside id="${1:name}">
+		${2}
+	</aside>${3}
+snippet audio
+	<audio src="${1:source}" control="${2:controls}">
+		${3}
+	</audio>${4}
+snippet canvas
+	<canvas id="${1:name}"><canvas/>${2}
+snippet command
+	<command onclick="${1:alert('Hello World')}">
+	${2:Click Me!}
+	</command>${3}
+snippet datalist
+	<datalist id="${1:name}">
+		<option value="${2:name}"
+		<option value="${3:other}"
+	</datalist>${4}
+snippet details
+	<details>
+		${1}
+	</details>${2}
+snippet embed
+	<embed src="${1:link}" />${2}
+snippet figure
+	<figure>
+		<figcaption>${1:content}</figcaption>
+		<img src="${2:src}" width="${3:000}" height="${4:000}" />
+	</figure>${5}
+snippet footer
+	<footer>${1:content}</footer>${2}
+snippet header
+	<header>
+		<h1>${1:content}</h1>
+		<p>${2:content}</p>
+	</header>${3}
+snippet hgroup
+	<hgroup>
+		<h1>${1:content}</h1>
+		<h2>${2:content}</h2>
+	</hgroup>${3}
+snippet keygen
+	Encryption: <keygen name="${1:name}" />${2}
+snippet meter
+	<meter value="${1:num}" min="${2:num}" max="${3:num}">
+	${4:content}
+	</meter>${5}
+snippet mark
+	<mark>${1:text}</mark>${2}
+snippet output
+	<output name="${1:name}" onforminput="${2:value}"></output>${3}
+snippet progress
+	<progress>
+		<${1:value}>
+	</progress>${2}
+snippet section
+	<section>
+		${1}
+	</section>${2}
+snippet source
+	<source src="${1:link}" type="${2:type}" />
+snippet time
+	<time>
+		${1}
+	</time>${2}
+snippet video
+	<video src="${1:src}" controls="${2:control}">
+		${3}
+	</video>${4}
+snippet wbr
+	<wbr>${1:content}<wbr>${2}
+snippet contente
+	contenteditable="${1:boolean}"
+snippet hide
+	hidden="hidden"${1}
+snippet spell
+	spellcheck="true"${1}
