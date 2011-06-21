@@ -1,0 +1,16 @@
+snippet mdt
+	MonsterDebugger.trace(${1:target}, ${2:message});
+snippet info
+	SlideTrace.info(${1:message});
+snippet get
+	public function get ${1:property}() : ${2:type} {
+		return _$1;
+	}
+
+snippet set
+	public function set ${1:property}(value : ${2:type}) : void {
+		_$1 = value;
+	}
+
+snippet nl
+	import nl.demonsters.debugger.MonsterDebugger;
