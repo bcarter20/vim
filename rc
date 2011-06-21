@@ -1,6 +1,7 @@
 set nocompatible
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
+set statusline+=%{rvm#statusline()}
 set hidden
 if &t_Co >= 256 || has("gui_running")
    colorscheme motus
@@ -21,20 +22,28 @@ set history=1000
 set undolevels=1000
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
+filetype plugin on
 filetype plugin indent on
-
+set ofu=syntaxcomplete#Complete
+set omnifunc=csscomplete#CompleteCSS
+compiler ruby
+au filetype ruby set omnifunc=rubycomplete#Complete
+let g:rubycomplete_buffer_loading = 1
+let g:rubycomplete_classes_in_global = 1
+let g:rubycomplete_rails = 1
 map Q gq
 
 set mouse=a
 
+set softtabstop=2
 set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
+set tabstop=2     " a tab is two spaces
 set backspace=indent,eol,start
                   " allow backspacing over everything in insert mode
 set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
+set shiftwidth=2  " number of spaces to use for autoindenting
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set showmatch     " set show matching parenthesis
 set ignorecase    " ignore case when searching
@@ -53,5 +62,3 @@ nmap fl :FufLine<CR>
 
 """"NerdTree""""
 nmap nt :NERDTreeToggle<CR>
-
-
